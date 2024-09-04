@@ -550,6 +550,7 @@ test("getconnections", {}, function()
 		Enable = "function",
 	}
 	local bindable = Instance.new("BindableEvent")
+wait(1)
 	bindable.Event:Connect(function() end)
 	local connection = getconnections(bindable.Event)[1]
 	for k, v in pairs(types) do
