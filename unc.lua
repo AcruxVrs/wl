@@ -540,9 +540,10 @@ end)
 test("getconnections", {}, function()
 	local types = {
 		Enabled = "boolean",
-		State = "boolean",
+		ForeignState = "boolean",
 		LuaConnection = "boolean",
 		Function = "function",
+		Thread = "thread",
 		Fire = "function",
 		Defer = "function",
 		Disconnect = "function",
@@ -550,7 +551,6 @@ test("getconnections", {}, function()
 		Enable = "function",
 	}
 	local bindable = Instance.new("BindableEvent")
-wait(1)
 	bindable.Event:Connect(function() end)
 	local connection = getconnections(bindable.Event)[1]
 	for k, v in pairs(types) do
