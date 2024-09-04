@@ -868,33 +868,29 @@ test("WebSocket.connect", {}, function()
 end)
 
 test("getcallingscript", {}, function()
-    -- Helper function to test getcallingscript
     local function testFunction()
         -- Call getcallingscript and assert the result
         local callingScript = getcallingscript()
         assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
     end
-
-    -- Create a new ModuleScript for the test
-    local module = Instance.new("ModuleScript")
-    module.Source = [[
+    local localScript = Instance.new("LocalScript")
+    localScript.Source = [[
         local function testFunction()
             local callingScript = getcallingscript()
             assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
         end
-        
+
         return testFunction
     ]]
-    module.Parent = game.ServerScriptService
+    localScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-    -- Create a test script
-    local testScript = Instance.new("Script")
-    testScript.Source = [[
-        local testFunction = require(game.ServerScriptService.ModuleScript)
+    local testCallerScript = Instance.new("LocalScript")
+    testCallerScript.Source = [[
+        local testFunction = require(game.Players.LocalPlayer.PlayerGui.LocalScript)
         testFunction()
     ]]
-    testScript.Parent = game.ServerScriptService
+    testCallerScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-    -- Run the test script
-    testScript.Disabled = false  -- Enable the script
+    testCallerScript.Disabled = false  -- Enable the script to execute the test
 end)
+
