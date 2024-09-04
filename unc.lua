@@ -161,7 +161,22 @@ test("clonefunction", {}, function()
 	assert(test ~= copy, "The clone should not be equal to the original")
 end)
 
-test("getcallingscript", {})
+test("getcallingscript", {}, function()
+    local function testFunction()
+        -- Call getcallingscript and assert the result
+        local callingScript = getcallingscript()
+        assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
+    end
+    local localScript = Instance.new("LocalScript")
+    localScript.Source = [[
+        local function testFunction()
+            local callingScript = getcallingscript()
+            assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
+        end
+
+        return testFunction
+    ]]
+end)
 
 test("getscriptclosure", {"getscriptfunction"}, function()
 	local module = game:GetService("CoreGui").RobloxGui.Modules.Common.Constants
@@ -867,30 +882,5 @@ test("WebSocket.connect", {}, function()
 	ws:Close()
 end)
 
-test("getcallingscript", {}, function()
-    local function testFunction()
-        -- Call getcallingscript and assert the result
-        local callingScript = getcallingscript()
-        assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
-    end
-    local localScript = Instance.new("LocalScript")
-    localScript.Source = [[
-        local function testFunction()
-            local callingScript = getcallingscript()
-            assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
-        end
 
-        return testFunction
-    ]]
-    localScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-    local testCallerScript = Instance.new("LocalScript")
-    testCallerScript.Source = [[
-        local testFunction = require(game.Players.LocalPlayer.PlayerGui.LocalScript)
-        testFunction()
-    ]]
-    testCallerScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-    testCallerScript.Disabled = false  -- Enable the script to execute the test
-end)
 
