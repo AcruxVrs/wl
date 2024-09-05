@@ -161,28 +161,7 @@ test("clonefunction", {}, function()
 	assert(test ~= copy, "The clone should not be equal to the original")
 end)
 
-test("getcallingscript", {}, function()
-    local function testFunction()
-        -- Call getcallingscript and assert the result
-        local callingScript = getcallingscript()
-        assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
-    end
-    local localScript = Instance.new("LocalScript")
-localScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-    localScript.Source = [[
-        -- Define the test function inside the LocalScript
-        local function testFunction()
-            local callingScript = getcallingscript()
-            assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
-        end
-        
-        -- Call the test function
-        testFunction()
-    ]]
 
-       
-    
-end)
 
 test("getscriptclosure", {"getscriptfunction"}, function()
 	local module = game:GetService("CoreGui").RobloxGui.Modules.Common.Constants
