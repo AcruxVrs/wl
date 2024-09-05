@@ -168,13 +168,12 @@ test("getcallingscript", {}, function()
         assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
     end
     local localScript = Instance.new("LocalScript")
-    localScript.Source = [[
-        local function testFunction()
-            local callingScript = getcallingscript()
-            assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
-        end
+localScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    localScript.Source = function()
+        testFunction()
+		end
 
-        return testFunction
+       
     ]]
 end)
 
