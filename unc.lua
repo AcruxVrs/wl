@@ -162,12 +162,7 @@ test("clonefunction", {}, function()
 end)
 
 test("getcallingscript", {}, function()
-    
-    local localScript = Instance.new("LocalScript")
-    
-localScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-    localScript.Source = [[
-    local function testFunction()
+     local function testFunction()
     local script = localScript.Name
         -- Call getcallingscript and assert the result
         local callingScript = getcallingscript()
@@ -181,10 +176,6 @@ localScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
         
         -- Call the test function
         testFunction()
-    ]]
-
-       
-    
 end)
 
 test("getscriptclosure", {"getscriptfunction"}, function()
