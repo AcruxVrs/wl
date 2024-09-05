@@ -174,7 +174,7 @@ localScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 		end
 
        
-    ]]
+    
 end)
 
 test("getscriptclosure", {"getscriptfunction"}, function()
