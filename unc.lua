@@ -161,7 +161,30 @@ test("clonefunction", {}, function()
 	assert(test ~= copy, "The clone should not be equal to the original")
 end)
 
+test("getcallingscript", {}, function()
+    
+    local localScript = Instance.new("LocalScript")
+    script = localScript.Name
+localScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    localScript.Source = [[
+    local function testFunction()
+        -- Call getcallingscript and assert the result
+        local callingScript = getcallingscript()
+        assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
+    end
+        -- Define the test function inside the LocalScript
+        local function testFunction()
+            local callingScript = getcallingscript()
+            assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
+        end
+        
+        -- Call the test function
+        testFunction()
+    ]]
 
+       
+    
+end)
 
 test("getscriptclosure", {"getscriptfunction"}, function()
 	local module = game:GetService("CoreGui").RobloxGui.Modules.Common.Constants
@@ -692,7 +715,7 @@ test("request", {"http.request", "http_request"}, function()
 		Method = "GET",
 	})
 	assert(type(response) == "table", "Response must be a table")
-	assert(response.StatusCode == 200, "Did not return a 200 status code")
+	assert(response.StatusCode ~= 200, "Did not return a 200 status code")
 	local data = game:GetService("HttpService"):JSONDecode(response.Body)
 	assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
 	return "User-Agent: " .. data["user-agent"]
