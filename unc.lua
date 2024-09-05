@@ -1,5 +1,6 @@
 local passes, fails, undefined = 0, 0, 0
 local running = 0
+local runningstate = true
 
 local function getGlobal(path)
 	local value = getfenv(0)
@@ -50,6 +51,7 @@ local function test(name, aliases, callback)
 
 		running -= 1
 	end)
+wait()
 end
 
 -- Header and summary
@@ -60,7 +62,7 @@ print("UNC Environment Check")
 print("✅ - Pass, ⛔ - Fail, ⏺️ - No test, ⚠️ - Missing aliases\n")
 
 task.defer(function()
-	repeat task.wait() until running == 0
+	repeat task.wait() until runningstate == false and running == 0
 
 	local rate = math.round(passes / (passes + fails) * 100)
 	local outOf = passes .. " out of " .. (passes + fails)
@@ -161,22 +163,7 @@ test("clonefunction", {}, function()
 	assert(test ~= copy, "The clone should not be equal to the original")
 end)
 
-test("getcallingscript", {}, function()
-     local function testFunction()
-    local script = localScript.Name
-        -- Call getcallingscript and assert the result
-        local callingScript = getcallingscript()
-        assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
-    end
-        -- Define the test function inside the LocalScript
-        local function testFunction()
-            local callingScript = getcallingscript()
-            assert(callingScript == script, "Expected calling script to be the test script, but got: " .. tostring(callingScript))
-        end
-        
-        -- Call the test function
-        testFunction()
-end)
+
 
 test("getscriptclosure", {"getscriptfunction"}, function()
 	local module = game:GetService("CoreGui").RobloxGui.Modules.Common.Constants
@@ -880,7 +867,8 @@ test("WebSocket.connect", {}, function()
 		end
 	end
 	ws:Close()
-end)
 
+end)
+ runningstate = false
 
 
