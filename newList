@@ -1,7 +1,7 @@
 return {
   { name = "X Fighter Trainer", nickname = "X Fighter", requiredValue = 0 }, 
     { name = "Klirin", nickname = "Klirin", requiredValue = 30001}, 
-    { name = "Kid Nohag", nickname = "Kid Nohag", requiredValue = 60001}, 
+    --{ name = "Kid Nohag", nickname = "Kid Nohag", requiredValue = 60001}, 
     { name = "Turtle Student", nickname = "Turtle Student", requiredValue = 80001 }, 
     { name = "Radish", nickname = "Radish", requiredValue = 100001  }, 
     { name = "Mapa", nickname = "Mapa", requiredValue = 200001 }, 
