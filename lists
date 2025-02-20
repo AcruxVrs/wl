@@ -1,5 +1,5 @@
 return
 {
-  {name = "Default", Reb = "All", type = "Reb/Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/newList"},
-  {name = "Goku Farm", Reb = "All", type = "Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/gokuList"}
+  {name = "Default", reb = "All", type = "Reb/Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/newList"},
+  {name = "Goku Farm", reb = "All", type = "Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/gokuList"}
 }
