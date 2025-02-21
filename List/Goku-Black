@@ -1,0 +1,6 @@
+return 
+{
+  { name = "Halloween NPC", nickname = "Halloween Boss", requiredValue = 0, questless = true},
+  { name = "Kid Nohag", nickname = "Oozaru", requiredValue = 1 },
+  { name = "Goku Black", nickname = "Goku Black", requiredValue = 2, questless = true}
+}

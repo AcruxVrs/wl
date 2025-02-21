@@ -1,0 +1,11 @@
+-- Op_Mizu
+return 
+{
+    { name = "Mapa", nickname = "Mapa", requiredValue = 0 }, 
+    { name = "Halloween NPC", nickname = "Halloween Boss", requiredValue = 4000001 , questless = true},
+    { name = "SSJG Kakata", nickname = "SSJG Kakata", requiredValue = 100000000}, 
+    { name = "Vekuta (LBSSJ4)", nickname = "Vekuta (LBSSJ4)", requiredValue = 500000000},
+    { name = "Vegetable (LBSSJ4)", nickname = "Vegetable (LBSSJ4)", requiredValue = 1250000000},
+    { name = "Wukong Rose", nickname = "Wukong Rose", requiredValue = 7100000000},
+    { name = "Vekuta (SSJBUI)", nickname = "Vekuta (SSJBUI)", requiredValue = 7600000000} 
+} 
