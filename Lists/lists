@@ -1,6 +1,6 @@
 return
 {
-  {name = "Default", reb = "All Rebs", type = "Reb/Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/newList"},
-  {name = "Goku Black Farm", reb = "All Rebs", type = "Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/gokuList"},
-  {name = "By Op_Mizu", reb = "12k+ Rebs", type = "Reb", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/list%231"}
+  {name = "Default", author = "Orbital", reb = "All Rebs", type = "Reb/Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/newList"},
+  {name = "Goku Black Farm", author = "Oribital", reb = "All Rebs", type = "Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/gokuList"},
+  {name = "By Op_Mizu", author = "Op_Mizu", reb = "12k+ Rebs", type = "Reb", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/list%231"}
 }
