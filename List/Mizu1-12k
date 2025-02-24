@@ -1,12 +1,11 @@
 -- Op_Mizu
 return 
 {
-    { name = "Mapa", nickname = "Mapa", requiredValue = 0 }, 
-    { name = "Halloween NPC", nickname = "Halloween Boss", requiredValue = 4000001 , questless = true},
+    { name = "X Fighter Trainer", nickname = "X Fighter", requiredValue = 0 }, 
+    { name = "Winter Gohan", nickname = "Winter Gohan", requiredValue = 15500001}, 
+    { name = "Winter Wukong", nickname = "Winter Wukong", requiredValue = 60000001}, 
     { name = "SSJG Kakata", nickname = "SSJG Kakata", requiredValue = 100000000}, 
-    { name = "Wukong (Omen)", nickname = "Wukong (Omen)", requiredValue = 210000001 }, 
-    { name = "Wukong (LBSSJ4)", nickname = "Wukong (LBSSJ4)", requiredValue = 2000000000},
-    { name = "Vegetable (LBSSJ4)", nickname = "Vegetable (LBSSJ4)", requiredValue = 1590000000},
-    { name = "Wukong Rose", nickname = "Wukong Rose", requiredValue = 8000000000},
-    { name = "Vekuta (SSJBUI)", nickname = "Vekuta (SSJBUI)", requiredValue = 8600000000}
+    { name = "Winter Beerus", nickname = "Winter Beerus", requiredValue = 2000000000},
+    { name = "Vekuta (SSJBUI)", nickname = "Vekuta (SSJBUI)", requiredValue = 6700000000}   
+
 } 
