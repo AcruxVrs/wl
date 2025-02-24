@@ -3,5 +3,5 @@ return
   {name = "Default", author = "Orbital", version = "v1.5", reb = "All Rebs", type = "Reb/Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/List/Default"},
   {name = "Goku Black Farm", author = "Orbital", version = "v1.5", reb = "All Rebs", type = "Stat", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/List/Goku-Black"},
   {name = "Reb Farm", author = "Op_Mizu", version = "v1.5", reb = "12k+ Rebs", type = "Reb", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/List/Mizu1-12k"},
-  --{name = "Reb Farm", author = "Op_Mizu", version = "v1.5", reb = "3k Rebs", type = "Reb", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/List/Mizu2-3k"}
+  {name = "Reb Farm", author = "Op_Mizu", version = "v1.5", reb = "3k Rebs", type = "Reb", list = "https://raw.githubusercontent.com/AcruxVrs/wl/refs/heads/main/List/Mizu2-3k"}
 }
