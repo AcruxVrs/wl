@@ -2,14 +2,14 @@
 return {
   ["Earth"] = 
   {
-    { name = "X Fighter Trainer", nickname = "X Fighter", requiredValue = 0 }, 
-    { name = "Winter Gohan", nickname = "Winter Gohan", requiredValue = 15500001}, 
-    { name = "SSJG Kakata", nickname = "SSJG Kakata", requiredValue = 100000000},
-    { name = "Winter Wukong", nickname = "Winter Wukong", requiredValue = 100000001},  
+    { name = "Kid Nohag", nickname = "Kid Nohag", requiredValue = 0}, 
+    { name = "SSJB Wukong", nickname = "SSJB Wukong", requiredValue = 10000001}, 
+    { name = "Winter Wukong", nickname = "Winter Wukong", requiredValue = 50000001},
+    { name = "SSJG Kakata", nickname = "SSJG Kakata", requiredValue = 400000000},
   },
 ["Vills Planet"] =
   {
     { name = "Winter Beerus", nickname = "Winter Beerus", requiredValue = 2000000000},
-    { name = "Vekuta (SSJBUI)", nickname = "Vekuta (SSJBUI)", requiredValue = 6700000000}   
+    { name = "Vekuta (SSJBUI)", nickname = "Vekuta (SSJBUI)", requiredValue = 6700000000}
   } 
 }
