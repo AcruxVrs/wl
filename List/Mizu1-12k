@@ -4,7 +4,7 @@ return {
   {
     { name = "Kid Nohag", nickname = "Kid Nohag", requiredValue = 0}, 
     { name = "SSJB Wukong", nickname = "SSJB Wukong", requiredValue = 10000001}, 
-    { name = "Winter Wukong", nickname = "Winter Wukong", requiredValue = 50000001},
+    { name = "Winter Wukong", nickname = "Winter Wukong", requiredValue = 563000000},
     { name = "SSJG Kakata", nickname = "SSJG Kakata", requiredValue = 400000000},
   },
 ["Vills Planet"] =
