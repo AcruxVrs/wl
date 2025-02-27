@@ -15,6 +15,7 @@ local function getGlobal(path)
 end
 
 local function test(name, aliases, callback)
+--task.spawn(function() end)
         --rconsoleinfo(name) -- debug which function thats going to get tested
 	running += 1
 
@@ -51,7 +52,7 @@ local function test(name, aliases, callback)
 
 		running -= 1
 	end)
-wait()
+--wait()
 end
 
 -- Header and summary
