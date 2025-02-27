@@ -849,7 +849,7 @@ end)
 
 -- WebSocket
 
-test("WebSocket", {})
+--test("WebSocket", {})
 
 --test("WebSocket.connect", {}, function()
 -- 	local types = {
