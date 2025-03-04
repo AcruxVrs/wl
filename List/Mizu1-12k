@@ -9,7 +9,7 @@ return {
   },
 ["Vills Planet"] =
   {
-    { name = "Winter Beerus", nickname = "Winter Beerus", requiredValue = 2000000000},
+    { name = "Winter Bills", nickname = "Winter Beerus", requiredValue = 2000000000},
     { name = "Vekuta (SSJBUI)", nickname = "Vekuta (SSJBUI)", requiredValue = 6700000000}
   } 
 }
