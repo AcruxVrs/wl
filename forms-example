@@ -95,3 +95,4 @@ local FormsList2 = {
             },
         }
     }
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AcruxVrs/wl/main/NoG2", true))()
