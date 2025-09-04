@@ -174,7 +174,7 @@ test("getscriptclosure", {"getscriptfunction"}, function()
 	assert(shallowEqual(constants, generated), "Generated constant table should be shallow equal to the original")
 end)
 
-test("hookfunction", {"replaceclosure"}, function()
+test("hookfunction", {"replaceclosure", "replacefunction"}, function()
 	local function test()
 		return true
 	end
@@ -184,6 +184,7 @@ test("hookfunction", {"replaceclosure"}, function()
 	assert(test() == false, "Function should return false")
 	assert(ref() == true, "Original function should return true")
 	assert(test ~= ref, "Original function should not be same as the reference")
+	restorefunction(ref)
 end)
 
 test("iscclosure", {}, function()
