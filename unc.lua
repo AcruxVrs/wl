@@ -533,7 +533,7 @@ test("fireclickdetector", {}, function()
 	fireclickdetector(detector, 50, "MouseHoverEnter")
 end)
 
-test("getcallbackvalue", {}, function()
+test("getcallbackvalue", {"getcbvalue"}, function()
 	local bindable = Instance.new("BindableFunction")
 	local function test()
 	end
@@ -704,7 +704,7 @@ end)
 
 test("setclipboard", {"toclipboard"})
 
-test("setfpscap", {}, function()
+test("setfpscap", {"set_fps_cap"}, function()
 	local renderStepped = game:GetService("RunService").RenderStepped
 	local function step()
 		renderStepped:Wait()
