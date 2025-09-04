@@ -167,7 +167,7 @@ end)
 
 
 test("getscriptclosure", {"getscriptfunction"}, function()
-	local module = game:GetService("CoreGui").RobloxGui.Modules.Common.Constants
+	local module = game:GetService("CoreGui").RobloxGui.Modules.DevConsole.Constants
 	local constants = getrenv().require(module)
 	local generated = getscriptclosure(module)()
 	assert(constants ~= generated, "Generated module should not match the original")
