@@ -220,6 +220,7 @@ test("newcclosure", {}, function()
 	assert(test() == testC(), "New C closure should return the same value as the original")
 	assert(test ~= testC, "New C closure should not be same as the original")
 	assert(iscclosure(testC), "New C closure should be a C closure")
+	restoreclosure(testC)
 end)
 
 -- Console
